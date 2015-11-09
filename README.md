@@ -1,47 +1,5 @@
 # ng-app
 
-# Usage
-
-## Create your project
-
-Install the required tools: `yo`, `gulp`, `bower`
-```
-npm install -g yo gulp bower
-```
-
-Install `generator-gulp-angular`:
-```
-npm install -g generator-gulp-angular
-```
-
-Make a new directory, and `cd` into it:
-```
-mkdir my-new-project && cd $_
-```
-
-Run `yo gulp-angular`, optionally passing an app name:
-```
-yo gulp-angular [app-name]
-```
-
-## Yo options
-`yo gulp-angular --help` or `yo gulp-angular -h` for help. All options are not required. If not provided, default values will be used.
-
-* `--app-path='src'` customize Angular's app folder, relative to cwd, default is `src`
-* `--dist-path='dist'` customize build target folder, relative to cwd, default is `dist`
-* `--e2e-path='e2e'` customize e2e test specs folder, relative to cwd, default is `e2e`
-* `--tmp-path='.tmp'` customize pre-processing temp folder, relative to cwd, default is `.tmp`
-* `--skip-install` do not run `bower install` and `npm install` after generating the app, default is `false` (not skip)
-* `--skip-welcome-message` skip yo welcome messages, default is `false` (not skip)
-* `--skip-message` skip install messages, default is `false` (not skip)
-* `--default` use default configurations, default is `false`
-* `--advanced` prompt for advanced additional features, default is `false`
-
-
-Paths configuration are stored in `gulpfile.js`. Change `options.(src|dist|tmp|e2e)` in `gulpfile.js` if you want to config paths after the app is generated.
-
-**Warning**: The paths are also written in the `index.html` for the build with useref. If you want to change these paths, you also have to change the paths there in order to have the build task working.
-
 ## Use Gulp tasks
 
 * `gulp` or `gulp build` to build an optimized version of your application in `/dist`
@@ -52,7 +10,10 @@ Paths configuration are stored in `gulpfile.js`. Change `options.(src|dist|tmp|e
 * `gulp protractor` to launch your e2e tests with Protractor
 * `gulp protractor:dist` to launch your e2e tests with Protractor on the dist files
 
-More information on the gulp tasks in the [User Guide](user-guide.md).
+Paths configuration are stored in `gulpfile.js`. Change `options.(src|dist|tmp|e2e)` in `gulpfile.js` if you want to config paths after the app is generated.
+
+**Warning**: The paths are also written in the `index.html` for the build with useref. If you want to change these paths, you also have to change the paths there in order to have the build task working.
+
 
 ## Directory structure
 
