@@ -1,0 +1,30 @@
+<div layout="row">
+
+
+<table align="left">
+    <thead>
+    <tr>
+      <th>Actions</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Url</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="ct in ctlist.list">
+      <td>
+        <button ng-click="ctlist.edit(ct)" class="md-raised">Edit</button>
+        <button ng-click="ctlist.remove(ct)" class="md-raised md-alert">X</button>
+      </td>
+
+      <td>{{::ct.id}}</td>
+      <td>{{::ct.title}}</td>
+      <td>{{::ct.name}}</td>
+      <td>{{::ct.description}}</td>
+      <td>{{::ct.url}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

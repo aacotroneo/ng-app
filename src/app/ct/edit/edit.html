@@ -1,0 +1,32 @@
+<div layout layout-align="center">
+  <form name="ctform.form" ng-submit="ctform.onFormSubmit()" novalidate flex="50">
+    <md-toolbar>
+      <h1 class="md-toolbar-tools">
+        {{ctform.title}}}
+        <md-button type="submit" class="md-primary md-raised" ng-disabled="ctform.$pristine || ctform.$invalid">
+          {{ctform.actionText}}
+        </md-button>
+      </h1>
+    </md-toolbar>
+
+    <md-content class="md-padding">
+      <md-input-container>
+        <label>Title</label>
+        <input type="text" ng-model="ctform.model.title" name="title" required>
+      </md-input-container>
+      <md-input-container>
+        <label>Name</label>
+        <input type="text" ng-model="ctform.model.name" name="name" required>
+      </md-input-container>
+      <md-input-container>
+        <label>Description</label>
+        <input type="text" ng-model="ctform.model.description" name="description" required>
+      </md-input-container>
+      <md-input-container>
+        <label>Url</label>
+        <input type="text" ng-model="ctform.model.url" name="url" required>
+      </md-input-container>
+    </md-content>
+  </form>
+
+</div>
