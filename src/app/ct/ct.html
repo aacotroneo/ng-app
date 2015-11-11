@@ -1,16 +1,17 @@
-<div layout="vertical" layout-fill layout-align="center">
+<div >
 
-  <md-content flex="100">
     <header>
-      <acme-navbar></acme-navbar>
+
     </header>
 
-    <h3>CT things</h3>
+    <section >
+      <h3 >CT things   <button ui-sref="ct.new">New</button>  <button ui-sref="ct.list">list</button></h3>
 
-    <md-button ui-sref="ct.new" class="md-raised">New</md-button>
+    </section>
 
+    <div>
       <ui-view></ui-view>
+    </div>
 
-  </md-content>
 
 </div>

@@ -2,12 +2,13 @@
   'use strict';
 
   angular
-    .module('ct.ct')
+    .module('ct')
     .factory('ctApi', ctApi);
 
   /** @ngInject */
-  function ctApi($http, $q) {
-    var apiHost = 'http://104.131.117.210:3000';
+  function ctApi($http) {
+    var apiHost = 'http://104.131.117.210:3001';
+    //var apiHost = 'http://localhost:3000';
 
     return {
       getList: getList,
@@ -43,7 +44,7 @@
     function update(model) {
       if (model.id) {
         //update
-        return $http.post(apiHost + '/cts/' + model.id + '.json', model);
+        return $http.put(apiHost + '/cts/' + model.id + '.json', model);
       } else {
         //create
         return $http.post(apiHost + '/cts.json', model);

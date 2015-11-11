@@ -1,7 +1,5 @@
-<div layout="row">
-
-
-<table align="left">
+<div>
+  <table >
     <thead>
     <tr>
       <th>Actions</th>
@@ -15,8 +13,8 @@
     <tbody>
     <tr ng-repeat="ct in ctlist.list">
       <td>
-        <button ng-click="ctlist.edit(ct)" class="md-raised">Edit</button>
-        <button ng-click="ctlist.remove(ct)" class="md-raised md-alert">X</button>
+        <button ng-click="ctlist.edit(ct)" >Edit</button>
+        <button ng-click="ctlist.remove(ct)">X</button>
       </td>
 
       <td>{{::ct.id}}</td>

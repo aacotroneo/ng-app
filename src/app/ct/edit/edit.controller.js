@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('ct.ct')
+    .module('ct')
     .controller('CtEditController', CtController);
 
   /** @ngInject */
-  function CtController(ctApi, toastr, $state, DATA) {
+  function CtController(ctApi,$state, $log, DATA) {
     var vm = this;
 
     vm.onFormSubmit = onFormSubmit;
@@ -27,14 +27,11 @@
       if (vm.form.$valid) {
 
         ctApi.update(vm.model)
-          .then(function (resp) {
-            //scope.form.$setPristine();
-            //angular.copy(scope.saml, scope.ctSamlModel);
-            toastr.info('Updated settings successfully!');
+          .then(function () {
             $state.go('ct.list');
           },
           function (err) {
-            toastr.error('Something went wrong. Please try again.');
+            $log.error('Something went wrong. Please try again.', err);
           });
       }
     }
